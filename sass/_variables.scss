@@ -1,0 +1,20 @@
+@import "compass", "includes";
+
+$break-small: 1000px;
+
+$degree: 7deg;
+
+$base-font-size: 18px;
+$base-line-height: 32px;
+$relative-font-sizing: true;
+$container-max-width: 640px;
+@include establish-baseline;
+
+$purple: #700A4D;
+$beet: #B41252;
+$yellow: #FFF2CA;
+$salmon: #FB8DA0;
+
+$body: 'Roboto', Helvetica, Arial, sans-serif;
+$condensed: 'Roboto Condensed', 'Roboto', Helvetica, Arial, sans-serif;
+$heading: 'Changa One', 'Roboto', Helvetica, Arial, sans-serif;

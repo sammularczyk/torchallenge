@@ -1,0 +1,236 @@
+@import "variables";
+
+body {
+  font-family: $body;
+  @include adjust-font-size-to(18px);
+  
+}
+
+.container {
+  max-width: 1020px;
+  padding: 0 2em;
+}
+
+
+// Header
+
+header {
+  @include padding-leader(3);
+  @include padding-trailer(4);
+  p {
+    max-width: 60%;
+  }
+  figure img {
+    max-width: 160px;
+  }
+  &:after {
+    height: 3em;
+  }
+}
+
+header ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  @include margin-leader(2);
+  font-family: $condensed;
+  text-transform: uppercase;
+  @include adjust-font-size-to(16px);
+  line-height: 1.2em;
+  text-align: left;
+  color: rgba(255, 255, 255, .8);
+  em {
+    font-weight: 300;
+    @include adjust-font-size-to(52px);
+    display: block;
+    line-height: 0.8em;
+    letter-spacing: -0.05em;
+    color: #FFF;
+  }
+}
+
+li.node-count {
+  @include column(1.75);
+  text-align: right;
+}
+li.node-progress {
+  @include column(6.25);
+  position: relative;
+  div {
+    margin-top: 0.1em;
+    width: 90%;
+    height: 0.6em;
+    @include transform(skew(-$degree));
+    overflow: hidden;
+    border: 2px solid $yellow;
+  }
+  span {
+    display: block;
+    background: $yellow;
+    height: 120%;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 160%;
+    width: 1px;
+    position: absolute;
+    top: -24%;
+    right: 0;
+    opacity: 0.3;
+    background: #FFF;
+    @include transform(skew(-$degree));
+  }
+}
+li.transferred {
+  @include column(4);
+  em {
+    float: left;
+    vertical-align: bottom;
+    padding-right: 0.25em;
+  }
+}
+
+div.background img {
+  width: 150%;
+  margin-left: -25%;
+}
+
+// Nav
+#page nav {
+  @include transform(translate3d(0, 0, 0) skew(-$degree));
+}
+nav {
+  top: 0;
+  left: 0;
+  right: auto;
+  padding-top: 1.5em;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  @include transition(all, 1s);
+  @include transform(translate3d(0, -110%, 0) skew(-$degree));
+  backface-visibility: hidden;
+  &.visible {
+    @include transform(translate3d(0, 0, 0));
+  }
+  ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-size: 0em;
+    @include transform(skew(-$degree));
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    margin-left: -1px;
+    margin: 0;
+    padding-left: 2em;
+    overflow: hidden;
+    font-size: 16px;
+    vertical-align: top;
+    &:first-child {
+      border-left: none;
+    }
+    &:hover span {
+      @include transform(translate3d(0, -3em, 0));
+    }
+  }
+  h1 {
+    display: inline;
+  }
+  li h1 a {
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: -15%;
+    width: 60px;
+    height: 130%;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: contain;
+    display: block;
+    
+  }
+  li.logo {
+    overflow: visible;
+    float: left;
+    display: block;
+    height: 2.65em;
+    width: 10%;
+    text-align: center;
+    background: $beet;
+    line-height: 0;
+    padding: 0;
+    @include transform(skew(0deg));
+    &:after {
+      display:none;
+    }
+  }
+  li a {
+    text-align: center;
+    display: inline-block;
+    @include box-sizing(border-box);
+    width: 100%;
+    padding: 0.75em 0;
+    text-decoration: none;
+    overflow: hidden;
+    height: 2.5em;
+    @include transform(skew($degree));
+    -webkit-perspective: 1000;
+    border: none;
+  }
+  li a span {
+    backface-visibility: hidden;
+    display: block;
+    @include transition(all, 0.6s);
+    &:after {
+      content: attr(data-hover);
+      display: block;
+      padding: 2em 0;
+      color: $purple;
+      backface-visibility: hidden;
+          -webkit-font-smoothing: antialiased;
+      
+    }
+  }
+}
+
+#toggle, .toggle {
+  display: none;
+}
+
+// Why
+
+#why {
+  h2 {
+    text-align: left;
+  }
+  li {
+    @include column(4);
+    text-align: left;
+    @include padding-leader(2);
+  }
+  figure {
+    width: 7em;
+    height: 7em;
+    margin: 0;
+    @include margin-trailer(1);
+  }
+  
+}
+
+// Get started
+
+#getstarted {
+  p {
+    max-width: 550px;
+  }
+  article {
+    @include column(5);
+    @include pull(1);
+  }
+  figure {
+    @include column(6);
+  }
+}

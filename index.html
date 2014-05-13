@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Tor Challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles/screen.css" />
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width: 850px)" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic|Roboto+Condensed:300italic,400italic|Changa+One' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+  </head>
+
+  <body>  
+    <nav>   
+      <div class="container">
+        <label for="toggle" class="toggle" data-open="Menu" data-close="Close" onclick></label>   
+        <input type="checkbox" id="toggle" />
+        <ul>
+          <li class="logo"><h1><a href="/">Tor Challenge</a></h1></li>
+          <li><a href="#"> <span data-hover="What is a Tor Relay?">What is a Tor Relay?</span> </a></li>
+          <li><a href="#"> <span data-hover="Setting up Tor">Setting up Tor</span> </a></li>
+          <li><a href="#"> <span data-hover="List of Relays">List of Relays</span> </a></li>
+          <li><a href="#"> <span data-hover="Tor On Campus">Tor On Campus</span> </a></li>
+          <li><a href="#"> <span data-hover="Legal FAQ">Legal FAQ</span> </a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    <header>
+      <div class="container">
+      
+        
+        <figure>
+          <span>Join the</span>
+          <img src="images/logo.png" />
+        </figure>
+        
+        <p>Tor is a powerful tool that helps you stay anonymous online.</p> 
+        <p>It can protect your privacy as you browse the Internet and circumvent government censorship of the webpages you visit.</p>
+        <a href="#why" class="button scroll">Learn more &rarr;</a>
+        
+        <ul>
+          <li class="node-count">
+            <em>1000</em>
+          </li>
+          <li class="node-progress">
+            nodes since 24 April
+            <div><span style="width: 23%"></span></div>
+          </li>
+          <li class="transferred">
+            <em>213k</em>
+            bytes <br /> transferred
+          </li>
+        </ul>
+              
+      </div>
+      
+      <div class="background">
+        <img src="images/bg-header.svg" />
+      </div>
+    </header>
+    
+    
+    <section id="why">
+      <div class="container">
+      
+        <h2><span>Why Tor Matters</span></h2>
+        <ul>
+          <li>
+            <figure>
+              <img src="images/icons/anonymous.png" width="100" height="100" alt="" />
+            </figure>
+            <h3>Anonymity</h3>
+            <p>Tor is used by political activists, whistleblowers, and journalists around the world who need to shield their identities as they read and write online.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="images/icons/padlock.png" width="100" height="100" alt="" />
+            </figure>
+            <h3>Privacy</h3>
+            <p>Tor helps you hide your IP address and prevent browser fingerprinting, making it more difficult for online trackers and even governments to surveil you.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="images/icons/megaphone.png" width="100" height="100" alt="" />
+            </figure>
+            <h3>Free Speech</h3>
+            <p>In countries where huge swaths of the Internet are blocked, people use Tor to access the open, uncensored web.</p>
+          </li>
+        </ul>
+        
+      </div>
+    </section>
+    
+    
+    <section id="getstarted">
+      <div class="container">    
+            
+            <article>
+              <h2><span>Get started with Tor</span></h2>
+              <p>We've created a video to show you how to set up a Tor relay. Watch the video and see how you can help contribute to the Tor network today. Once you've started running your relay, register your relay to take part in the Tor Challenge.</p>
+                          
+              <a href="#" class="button">Learn more &rarr;</a>
+            </article>
+            
+            <figure>
+              <div class="video-container">
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/DCu1G2rxj5c?rel=0" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </figure>
+      </div>    
+    </section>
+    
+    
+    <section id="register">
+      <div class="container">
+      
+        <h2><span>Register your Tor Relay</span></h2>
+        
+        <form method="post" action="">
+        
+          <label for="name">Full name</label>
+          <input type="text" name="name" id="name" placeholder="John Smith" value="" required="required" />
+          
+          <label for="email">Email address</label>
+          <input type="email" name="email" id="email" placeholder="john@example.com" value="" required="required" />
+          
+          <label for="address">Street address</label>
+          <input type="text" name="address" id="address" placeholder="815 Eddy Street" value="" />
+          
+          <div class="two">
+            <p>
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="San Fransisco" value="" />
+            </p>
+                      
+            <p>
+              <label for="zip">Zip code</label>
+              <input type="text" name="zip" id="zip" placeholder="94109" value="" />
+            </p>
+          </div>
+          
+          <label for="twitter">Twitter username</label>
+          <input type="text" name="twitter" id="twitter" placeholder="@twitter" value="" />
+          
+          <label for="fingerprint">Tor node fingerprint</label>
+          <input type="text" name="fingerprint" id="fingerprint" placeholder="fingerprint placeholder" value="" required="required" />
+          
+          <div class="three">
+            <p>
+              <label for="bridge">Bridge type</label>
+              <select name="bridge">
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+            </p>
+            
+            <p>
+              <label for="listing">Listing</label>
+              <select name="listing">
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+            </p>
+            
+            <p>
+              <label for="shirt">Shirt size</label>
+              <select name="shirt">
+                <option>Option 1</option>
+                <option>Option 2</option>
+              </select>
+            </p>
+            
+            
+          </div>
+          
+          <input type="button" id="submit" value="Submit!" />
+        </form>
+        
+      </div>
+    </section>
+    
+    
+    <footer>
+      <div class="container">
+      
+        <h2>Supported by</h2>
+        
+        <span class="logos">
+          <img src="images/logo-eff.png" />
+          <img src="images/logo-fotp.png" />
+          <img src="images/logo-tor.png" />
+          <img src="images/logo-fsf.png" />
+        </span>
+        
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        
+      </div>
+    </footer>
+    
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>
