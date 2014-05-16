@@ -92,9 +92,10 @@ li.transferred {
   }
 }
 
-div.background img {
-  width: 150%;
-  margin-left: -25%;
+div.background img {  
+  width: 1400px;
+  margin-left: -700px;
+  margin-top:-700px;
 }
 
 // Nav
@@ -119,7 +120,6 @@ nav {
     padding: 0;
     margin: 0;
     font-size: 0em;
-    @include transform(skew(-$degree));
   }
   li {
     position: relative;
@@ -141,12 +141,8 @@ nav {
     display: inline;
   }
   li h1 a {
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    top: -15%;
-    width: 60px;
-    height: 130%;
+    height: 90%;
+    margin: 2.5% auto;
     background: url(../images/logo.png) no-repeat center center;
     background-size: contain;
     display: block;
@@ -162,7 +158,9 @@ nav {
     background: $beet;
     line-height: 0;
     padding: 0;
-    @include transform(skew(0deg));
+    @include transform(skew(-$degree));
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     &:after {
       display:none;
     }
@@ -176,7 +174,6 @@ nav {
     text-decoration: none;
     overflow: hidden;
     height: 2.5em;
-    @include transform(skew($degree));
     -webkit-perspective: 1000;
     border: none;
   }
@@ -189,9 +186,7 @@ nav {
       display: block;
       padding: 2em 0;
       color: $purple;
-      backface-visibility: hidden;
-          -webkit-font-smoothing: antialiased;
-      
+      backface-visibility: hidden;      
     }
   }
 }
