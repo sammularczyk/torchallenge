@@ -17,6 +17,7 @@ body {
 header {
   @include padding-leader(3);
   @include padding-trailer(4);
+  @include margin-trailer(-1.1);
   p {
     max-width: 60%;
   }
@@ -99,22 +100,14 @@ div.background img {
 }
 
 // Nav
-#page nav {
-  @include transform(translate3d(0, 0, 0) skew(-$degree));
-}
 nav {
-  top: 0;
+  top: 20px;
   left: 0;
   right: auto;
-  padding-top: 1.5em;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  position: static;
   @include transition(all, 1s);
-  @include transform(translate3d(0, -110%, 0) skew(-$degree));
   backface-visibility: hidden;
-  &.visible {
-    @include transform(translate3d(0, 0, 0));
-  }
   ul {
     display: block;
     padding: 0;
