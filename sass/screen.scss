@@ -407,6 +407,13 @@ form input#submit {
     @include margin-leader(1);
     @include adjust-font-size-to(26px);
   }
+  ul li {
+    margin-bottom:20px; 
+    margin-top:20px;
+  }
+  h3 {
+    margin-top:30px;
+  }
 }
 
 // Footer
