@@ -233,7 +233,11 @@ header {
   
   p {
     margin: 1em auto;
-    opacity: 0.8;
+    strong {
+      font-size: 1.2em;
+      opacity: 1.0;
+      font-weight: normal;
+    }
   }
   
   &:after {
